@@ -19,9 +19,13 @@ app.use("/api", router);
 
 const PORT = process.env.PORT || 8080;
 
-connectDB().then(() => {
-  app.listen(PORT, () => {
-    console.log("connnect to DB");
-    console.log("Server is running " + PORT);
-  }); // الإستماع على البورت المحدد
-});
+connectDB()
+  .then(() => {
+    app.listen(PORT, () => {
+      console.log("Connect to DB");
+      console.log("Server is running on port " + PORT);
+    });
+  })
+  .catch((err) => {
+    console.error("Error connecting to DB:", err);
+  });
