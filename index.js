@@ -8,7 +8,7 @@ const router = require("./routes");
 const app = express();
 app.use(
   cors({
-    origin: "https://forntds.netlify.app/", // السماح بالطلبات من الأصل المحدد
+    origin: "https://forntds.netlify.app", // السماح بالطلبات من الأصل المحدد
     credentials: true, // السماح بإرسال الكوكيز مع الطلبات
   })
 );
